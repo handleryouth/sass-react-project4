@@ -63,7 +63,7 @@
     }
     &__triggered {
       transform: translateY(-15rem);
-      @media (max-height: 850px){
+      @media (max-height: 737px){
         transform: initial;
       }
     }

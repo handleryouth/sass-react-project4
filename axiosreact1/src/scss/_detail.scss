@@ -4,9 +4,9 @@
   width: 100vw;
   grid-template-columns: repeat(2, 1fr);
   padding: 0 4rem;
-  bottom: -999px;
+  bottom: -2000px;
   transition: transform 0.8s ease;
-  @media (max-height: 850px) {
+  @media (max-height: 737px) {
     background: black;
     align-items: center;
     height: 100vh;
@@ -18,9 +18,14 @@
       font-size: clamp(1rem, 2vw, 1.17rem);
     }
   }
+
+  @media (max-height: 900px) and (max-width: 555px) {
+    padding: 0 clamp(2rem, 2vw, 4rem);
+  }
+
   &__triggered {
-    transform: translateY(-66rem);
-    @media (max-height: 850px) {
+    transform: translateY(-2055px);
+    @media (max-height: 737px) {
       transform: translateX(-9999px);
     }
   }

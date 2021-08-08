@@ -54,13 +54,7 @@ export default function App() {
   }
 
   if (loading) {
-    return (
-      <div className="feeder">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    );
+    return <div className="container tumble"></div>;
   }
   return (
     <div className="app">
