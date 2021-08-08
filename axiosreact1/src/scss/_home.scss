@@ -1,48 +1,46 @@
 .home {
-  height: 100vh;
-  width: 100vw;
+  @include hw(100vh, 100vw);
   padding: 4rem;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  @include flexContainer(column, initial, space-between);
   @media (max-width: 768px) {
     padding: clamp(2rem, 9vw, 4rem) clamp(0.5rem, 9vw, 4rem);
+    min-width: 320px;
   }
   &__quotes {
-    display: flex;
-    align-items: flex-start;
+    @include flexContainer(row, flex-start, initial);
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
+      @include flexContainer(column, flex-start, initial);
     }
-    h3 {
-      width: 40rem;
-      margin-top: 0;
-      @media (max-width: 768px) {
-        width: clamp(16rem, 84vw, 40rem);
+    &__words {
+      h3 {
+        width: 40rem;
+        margin-top: 0;
+        @media (max-width: 768px) {
+          width: clamp(16rem, 84vw, 40rem);
+        }
       }
     }
+
     img {
       cursor: pointer;
       margin-left: 2rem;
+      @media (max-width: 768px){
+        margin: initial;
+      }
     }
   }
   &__detail {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    @include flexContainer(row, flex-end, space-between);
     transition: transform 0.8s ease;
 
     button {
-      @include noborderoutline();
-      width: 10rem;
-      height: 2rem;
+      @extend .detail__button;
+      @include hw(2rem, 10rem);
       cursor: pointer;
     }
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: flex-start;
+      @include flexContainer(column, flex-start, space-between);
     }
     &__greeting {
       h1 {
@@ -52,18 +50,18 @@
       }
       &__time {
         font-size: 9rem;
-        @media (max-width: 768px){
+        @media (max-width: 768px) {
           font-size: clamp(5rem, 5vw, 9rem);
         }
       }
       &__abbreviation {
-        font-size: 4rem;
-        margin-left: 2rem;
+        font-size: 2rem;
+        margin-left: 0.5rem;
       }
     }
     &__triggered {
       transform: translateY(-15rem);
-      @media (max-height: 737px){
+      @media (max-height: 737px) {
         transform: initial;
       }
     }

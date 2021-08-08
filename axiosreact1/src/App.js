@@ -46,7 +46,7 @@ export default function App() {
   }
 
   function RefreshClock() {
-    axios.get("http://worldtimeapi.org/api/ip").then((res) => {
+    axios.get("https://worldtimeapi.org/api/ip").then((res) => {
       setQuote((prevState) =>
         prevState.map((x, index) => (index === 1 ? res.data : x))
       );

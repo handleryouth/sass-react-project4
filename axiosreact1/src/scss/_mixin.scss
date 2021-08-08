@@ -26,3 +26,15 @@
     padding: $padding;
     margin: $margin;
   }
+
+  @mixin gridContainer($gridColumn, $columnGap, $rowGap) {
+    display: grid;
+    grid-template-columns: $gridColumn;
+    column-gap: $columnGap;
+    row-gap: $rowGap;
+  }
+
+  @mixin minimalsize($minheight, $minwidth){
+    min-width: $minwidth;
+    min-height: $minheight;
+  }

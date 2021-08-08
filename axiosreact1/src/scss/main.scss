@@ -12,14 +12,8 @@
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  @include paddingmargin(0, 0);
+  @include minimalsize(521px, 320px);
   font-family: "Inter";
-  color:white;
-  min-width: 320px;
-  min-height: 521px;
-}
-
-a {
-  text-decoration: none;
+  color: white;
 }

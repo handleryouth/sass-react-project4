@@ -1,14 +1,11 @@
 .app {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  min-height: 521px;
+  @include hw(100vh, 100vw);
+  @include minimalsize(521px, 320px);
   overflow: hidden;
   &__background {
+    @extend .app;
     position: absolute;
-    width: 100vw;
-    height: 100vh;
     z-index: -1;
-    min-height: 521px;
   }
 }

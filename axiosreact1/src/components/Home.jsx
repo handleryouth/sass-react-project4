@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home__quotes">
-        <div>
+        <div className="home__quotes__words">
           <h3>{quote.length > 0 && `"${quote[0].content}"`}</h3>
           <p>{quote.length > 0 && `"${quote[0].author}"`}</p>
         </div>
@@ -41,7 +41,7 @@ export default function Home() {
             , IT'S CURRENTLY
           </h1>
           <span className="home__detail__greeting__time">{time}</span>
-          <span className="home__detaik__greeting__abbreviation">
+          <span className="home__detail__greeting__abbreviation">
             {quote.length > 0 && `${quote[1].abbreviation}`}
           </span>
         </div>

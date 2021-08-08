@@ -5,35 +5,31 @@
 */
 
 .container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  width: 100vw;
+  @include flexContainer(initial, center, center);
+  @include hw(100vh, 100vw);
+  @include minimalsize(521px, 320px);
   background-color: black;
 }
 
-.tumble:after,
-.tumble:before {
-  border-radius: 100%;
-  content: "";
-  position: absolute;
-}
-
-.tumble:after {
-  -webkit-animation: tumble 1s infinite;
-  animation: tumble 1s infinite;
-  background-color: black;
-  -webkit-box-shadow: 8px 6px 0 0 white, -8px 6px 0 0 var(--secondary);
-  box-shadow: 8px 6px 0 0 white, -8px 6px 0 0 white;
-  height: 16px;
-  width: 16px;
-}
-
-.tumble:before {
-  border: 6px solid white;
-  height: 50px;
-  width: 50px;
+.tumble {
+  &:after,
+  :before {
+    border-radius: 100%;
+    content: "";
+    position: absolute;
+  }
+  &:after {
+    -webkit-animation: tumble 1s infinite;
+    animation: tumble 1s infinite;
+    background-color: black;
+    -webkit-box-shadow: 8px 6px 0 0 white, -8px 6px 0 0 var(--secondary);
+    box-shadow: 8px 6px 0 0 white, -8px 6px 0 0 white;
+    @include hw(16px, 16px);
+  }
+  &:before {
+    border: 6px solid white;
+    @include hw(50px, 50px);
+  }
 }
 
 @-webkit-keyframes tumble {

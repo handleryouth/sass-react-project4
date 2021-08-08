@@ -1,8 +1,7 @@
 .detail {
   position: absolute;
-  display: grid;
+  @include gridContainer(repeat(2, 1fr), initial, initial);
   width: 100vw;
-  grid-template-columns: repeat(2, 1fr);
   padding: 0 4rem;
   bottom: -2000px;
   transition: transform 0.8s ease;
@@ -27,6 +26,15 @@
     transform: translateY(-2055px);
     @media (max-height: 737px) {
       transform: translateX(-9999px);
+      min-width: 320px;
     }
+  }
+  &__button {
+    @include hw(2rem, clamp(5rem, 10vw, 8rem));
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+    font-family: "Inter";
   }
 }
