@@ -21,7 +21,7 @@ export default function App() {
     axios
       .all([
         axios.get("https://api.quotable.io/random"),
-        axios.get("http://worldtimeapi.org/api/ip"),
+        axios.get("https://worldtimeapi.org/api/ip"),
         axios.get(
           "https://pixabay.com/api/?key=22826797-0e3c3eea9b85a7ce6aee2bbb7&image_type=photo&colors=black&orientation=horizontal&category=nature&min_width=1280&min_height=720&per_page=100"
         ),
