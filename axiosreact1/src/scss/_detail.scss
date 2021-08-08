@@ -1,0 +1,27 @@
+.detail {
+  position: absolute;
+  display: grid;
+  width: 100vw;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 4rem;
+  bottom: -999px;
+  transition: transform 0.8s ease;
+  @media (max-height: 850px) {
+    background: black;
+    align-items: center;
+    height: 100vh;
+    min-height: 521px;
+    column-gap: 1rem;
+    bottom: initial;
+    right: -9999px;
+    h3 {
+      font-size: clamp(1rem, 2vw, 1.17rem);
+    }
+  }
+  &__triggered {
+    transform: translateY(-66rem);
+    @media (max-height: 850px) {
+      transform: translateX(-9999px);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import "@fontsource/inter";
+@import "./mixin";
+@import "./loading";
+@import "./app";
+@import "./home";
+@import "./detail";
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+  color:white;
+  min-width: 320px;
+  min-height: 521px;
+}
+
+a {
+  text-decoration: none;
+}
